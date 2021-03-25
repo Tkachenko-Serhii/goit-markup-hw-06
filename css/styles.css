@@ -145,6 +145,10 @@ img {
   color: var(--title-color);
 }
 
+.modal-label {
+  margin-bottom: 10px;
+}
+
 .modal-text {
   display: block;
   margin-bottom: 4px;
@@ -168,7 +172,6 @@ img {
 .modal-wrapper {
   position: relative;
   display: block;
-  margin-bottom: 10px;
 }
 
 .modal-wrapper:focus-within > .modal-icon {
@@ -222,17 +225,21 @@ img {
   margin-right: 8px;
   border: 2px solid var(--title-color);
   border-radius: 2px;
+  cursor: pointer;
   transition: background-color 250ms var(--animation-timing-function),
     background-image 250ms var(--animation-timing-function), border-color 250ms var(--animation-timing-function);
 }
 
 .contract-terms:checked + .contract-terms-desc::before {
   background-color: var(--accent-color);
-  box-shadow: 0 0 0;
   background-image: url(../img/check.svg);
   background-size: contain;
   background-origin: border-box;
   border-color: var(--accent-color);
+}
+
+.contract-terms:focus + .contract-terms-desc::before {
+  box-shadow: 0 0 0 2px black;
 }
 
 .contract {
