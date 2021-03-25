@@ -230,16 +230,17 @@ img {
     background-image 250ms var(--animation-timing-function), border-color 250ms var(--animation-timing-function);
 }
 
+.contract-terms:focus + .contract-terms-desc::before {
+  box-shadow: 0 0 0 2px black;
+}
+
 .contract-terms:checked + .contract-terms-desc::before {
   background-color: var(--accent-color);
   background-image: url(../img/check.svg);
   background-size: contain;
   background-origin: border-box;
   border-color: var(--accent-color);
-}
-
-.contract-terms:focus + .contract-terms-desc::before {
-  box-shadow: 0 0 0 2px black;
+  box-shadow: 0 0 0 2px transparent;
 }
 
 .contract {
